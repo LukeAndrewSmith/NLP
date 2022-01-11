@@ -1,16 +1,15 @@
-	\begin{table}[H] 
-             	\centering 
-             	\caption{{Floyd-Warshall}}	
-		\begin{subtable}{0.45\textwidth} 
-           		\centering
-			\begin{tabular}[t]{c ? c | c | c | c | c | c } 
-             			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
+\begin{table}[H]
+	\centering
+		\begin{subtable}{0.45\textwidth}
+		\centering
+			\begin{tabular}[t]{c ? c | c | c | c | c | c }
+			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
 			\specialrule{1pt}{0pt}{0pt}
 			\textbf{a} & & 1 & 2 & & & \\
 			\hline
 			\textbf{b} & & & & 1 & 5 & \\
 			\hline
-			\textbf{c} & & 2 & 1 & 3 & 2 & \\
+			\textbf{c} & & 2 & 1 & 2 & 3 & \\
 			\hline
 			\textbf{d} & 4 & & & 1 & 2 & 4 \\
 			\hline
@@ -21,36 +20,36 @@
 		\caption{Iteration: n = 0, Weights}
 		\label{tab:Iteration: n = 0, Weights}
 		\end{subtable}
-		\begin{subtable}{0.45\textwidth} 
-           		\centering
-			\begin{tabular}[t]{c ? c | c | c | c | c | c } 
-             			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
+		\begin{subtable}{0.45\textwidth}
+		\centering
+			\begin{tabular}[t]{c ? c | c | c | c | c | c }
+			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
 			\specialrule{1pt}{0pt}{0pt}
-			\textbf{a} & & a & a & & & \\
+			\textbf{a} & a & b & c & d & e & f \\
 			\hline
-			\textbf{b} & & & & b & b & \\
+			\textbf{b} & a & b & c & d & e & f \\
 			\hline
-			\textbf{c} & & c & c & c & c & \\
+			\textbf{c} & a & b & c & d & e & f \\
 			\hline
-			\textbf{d} & d & & & d & d & d \\
+			\textbf{d} & a & b & c & d & e & f \\
 			\hline
-			\textbf{e} & & & & & e & e \\
+			\textbf{e} & a & b & c & d & e & f \\
 			\hline
-			\textbf{f} & & & & f & & \\
+			\textbf{f} & a & b & c & d & e & f \\
 			\end{tabular}
 		\caption{Iteration: n = 0, Backtracking}
 		\label{tab:Iteration: n = 0, Backtracking}
 		\end{subtable}
-		\begin{subtable}{0.45\textwidth} 
-           		\centering
-			\begin{tabular}[t]{c ? c | c | c | c | c | c } 
-             			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
+		\begin{subtable}{0.45\textwidth}
+		\centering
+			\begin{tabular}[t]{c ? c | c | c | c | c | c }
+			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
 			\specialrule{1pt}{0pt}{0pt}
 			\textbf{a} & & 1 & 2 & & & \\
 			\hline
 			\textbf{b} & & & & 1 & 5 & \\
 			\hline
-			\textbf{c} & & 2 & 1 & 3 & 2 & \\
+			\textbf{c} & & 2 & 1 & 2 & 3 & \\
 			\hline
 			\textbf{d} & 4 & \textcolor{red}{5} & \textcolor{red}{6} & 1 & 2 & 4 \\
 			\hline
@@ -61,36 +60,36 @@
 		\caption{Iteration: n = 1, Weights}
 		\label{tab:Iteration: n = 1, Weights}
 		\end{subtable}
-		\begin{subtable}{0.45\textwidth} 
-           		\centering
-			\begin{tabular}[t]{c ? c | c | c | c | c | c } 
-             			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
+		\begin{subtable}{0.45\textwidth}
+		\centering
+			\begin{tabular}[t]{c ? c | c | c | c | c | c }
+			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
 			\specialrule{1pt}{0pt}{0pt}
-			\textbf{a} & & a & a & & & \\
+			\textbf{a} & a & b & c & d & e & f \\
 			\hline
-			\textbf{b} & & & & b & b & \\
+			\textbf{b} & a & b & c & d & e & f \\
 			\hline
-			\textbf{c} & & c & c & c & c & \\
+			\textbf{c} & a & b & c & d & e & f \\
 			\hline
-			\textbf{d} & d & \textcolor{red}{a} & \textcolor{red}{a} & d & d & d \\
+			\textbf{d} & a & \textcolor{red}{a} & \textcolor{red}{a} & d & e & f \\
 			\hline
-			\textbf{e} & & & & & e & e \\
+			\textbf{e} & a & b & c & d & e & f \\
 			\hline
-			\textbf{f} & & & & f & & \\
+			\textbf{f} & a & b & c & d & e & f \\
 			\end{tabular}
 		\caption{Iteration: n = 1, Backtracking}
 		\label{tab:Iteration: n = 1, Backtracking}
 		\end{subtable}
-		\begin{subtable}{0.45\textwidth} 
-           		\centering
-			\begin{tabular}[t]{c ? c | c | c | c | c | c } 
-             			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
+		\begin{subtable}{0.45\textwidth}
+		\centering
+			\begin{tabular}[t]{c ? c | c | c | c | c | c }
+			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
 			\specialrule{1pt}{0pt}{0pt}
 			\textbf{a} & & 1 & 2 & \textcolor{red}{2} & \textcolor{red}{6} & \\
 			\hline
 			\textbf{b} & & & & 1 & 5 & \\
 			\hline
-			\textbf{c} & & 2 & 1 & 3 & 2 & \\
+			\textbf{c} & & 2 & 1 & 2 & 3 & \\
 			\hline
 			\textbf{d} & 4 & 5 & 6 & 1 & 2 & 4 \\
 			\hline
@@ -101,36 +100,36 @@
 		\caption{Iteration: n = 2, Weights}
 		\label{tab:Iteration: n = 2, Weights}
 		\end{subtable}
-		\begin{subtable}{0.45\textwidth} 
-           		\centering
-			\begin{tabular}[t]{c ? c | c | c | c | c | c } 
-             			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
+		\begin{subtable}{0.45\textwidth}
+		\centering
+			\begin{tabular}[t]{c ? c | c | c | c | c | c }
+			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
 			\specialrule{1pt}{0pt}{0pt}
-			\textbf{a} & & a & a & \textcolor{red}{b} & \textcolor{red}{b} & \\
+			\textbf{a} & a & b & c & \textcolor{red}{b} & \textcolor{red}{b} & f \\
 			\hline
-			\textbf{b} & & & & b & b & \\
+			\textbf{b} & a & b & c & d & e & f \\
 			\hline
-			\textbf{c} & & c & c & c & c & \\
+			\textbf{c} & a & b & c & d & e & f \\
 			\hline
-			\textbf{d} & d & a & a & d & d & d \\
+			\textbf{d} & a & a & a & d & e & f \\
 			\hline
-			\textbf{e} & & & & & e & e \\
+			\textbf{e} & a & b & c & d & e & f \\
 			\hline
-			\textbf{f} & & & & f & & \\
+			\textbf{f} & a & b & c & d & e & f \\
 			\end{tabular}
 		\caption{Iteration: n = 2, Backtracking}
 		\label{tab:Iteration: n = 2, Backtracking}
 		\end{subtable}
-		\begin{subtable}{0.45\textwidth} 
-           		\centering
-			\begin{tabular}[t]{c ? c | c | c | c | c | c } 
-             			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
+		\begin{subtable}{0.45\textwidth}
+		\centering
+			\begin{tabular}[t]{c ? c | c | c | c | c | c }
+			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
 			\specialrule{1pt}{0pt}{0pt}
-			\textbf{a} & & 1 & 2 & 2 & \textcolor{red}{4} & \\
+			\textbf{a} & & 1 & 2 & 2 & \textcolor{red}{5} & \\
 			\hline
 			\textbf{b} & & & & 1 & 5 & \\
 			\hline
-			\textbf{c} & & 2 & 1 & 3 & 2 & \\
+			\textbf{c} & & 2 & 1 & 2 & 3 & \\
 			\hline
 			\textbf{d} & 4 & 5 & 6 & 1 & 2 & 4 \\
 			\hline
@@ -141,36 +140,36 @@
 		\caption{Iteration: n = 3, Weights}
 		\label{tab:Iteration: n = 3, Weights}
 		\end{subtable}
-		\begin{subtable}{0.45\textwidth} 
-           		\centering
-			\begin{tabular}[t]{c ? c | c | c | c | c | c } 
-             			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
+		\begin{subtable}{0.45\textwidth}
+		\centering
+			\begin{tabular}[t]{c ? c | c | c | c | c | c }
+			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
 			\specialrule{1pt}{0pt}{0pt}
-			\textbf{a} & & a & a & b & \textcolor{red}{c} & \\
+			\textbf{a} & a & b & c & b & \textcolor{red}{c} & f \\
 			\hline
-			\textbf{b} & & & & b & b & \\
+			\textbf{b} & a & b & c & d & e & f \\
 			\hline
-			\textbf{c} & & c & c & c & c & \\
+			\textbf{c} & a & b & c & d & e & f \\
 			\hline
-			\textbf{d} & d & a & a & d & d & d \\
+			\textbf{d} & a & a & a & d & e & f \\
 			\hline
-			\textbf{e} & & & & & e & e \\
+			\textbf{e} & a & b & c & d & e & f \\
 			\hline
-			\textbf{f} & & & & f & & \\
+			\textbf{f} & a & b & c & d & e & f \\
 			\end{tabular}
 		\caption{Iteration: n = 3, Backtracking}
 		\label{tab:Iteration: n = 3, Backtracking}
 		\end{subtable}
-		\begin{subtable}{0.45\textwidth} 
-           		\centering
-			\begin{tabular}[t]{c ? c | c | c | c | c | c } 
-             			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
+		\begin{subtable}{0.45\textwidth}
+		\centering
+			\begin{tabular}[t]{c ? c | c | c | c | c | c }
+			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
 			\specialrule{1pt}{0pt}{0pt}
-			\textbf{a} & \textcolor{red}{6} & 1 & 2 & 2 & 4 & \textcolor{red}{6} \\
+			\textbf{a} & \textcolor{red}{6} & 1 & 2 & 2 & \textcolor{red}{4} & \textcolor{red}{6} \\
 			\hline
 			\textbf{b} & \textcolor{red}{5} & \textcolor{red}{6} & \textcolor{red}{7} & 1 & \textcolor{red}{3} & \textcolor{red}{5} \\
 			\hline
-			\textbf{c} & \textcolor{red}{7} & 2 & 1 & 3 & 2 & \textcolor{red}{7} \\
+			\textbf{c} & \textcolor{red}{6} & 2 & 1 & 2 & 3 & \textcolor{red}{6} \\
 			\hline
 			\textbf{d} & 4 & 5 & 6 & 1 & 2 & 4 \\
 			\hline
@@ -181,41 +180,42 @@
 		\caption{Iteration: n = 4, Weights}
 		\label{tab:Iteration: n = 4, Weights}
 		\end{subtable}
-		\begin{subtable}{0.45\textwidth} 
-           		\centering
-			\begin{tabular}[t]{c ? c | c | c | c | c | c } 
-             			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
+		\begin{subtable}{0.45\textwidth}
+		\centering
+			\begin{tabular}[t]{c ? c | c | c | c | c | c }
+			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
 			\specialrule{1pt}{0pt}{0pt}
-			\textbf{a} & \textcolor{red}{d} & a & a & b & c & \textcolor{red}{d} \\
+			\textbf{a} & \textcolor{red}{b} & b & c & b & \textcolor{red}{b} & \textcolor{red}{b} \\
 			\hline
-			\textbf{b} & \textcolor{red}{d} & \textcolor{red}{d} & \textcolor{red}{d} & b & \textcolor{red}{d} & \textcolor{red}{d} \\
+			\textbf{b} & \textcolor{red}{d} & \textcolor{red}{d} & \textcolor{red}{d} & d & \textcolor{red}{d} & \textcolor{red}{d} \\
 			\hline
-			\textbf{c} & \textcolor{red}{d} & c & c & c & c & \textcolor{red}{d} \\
+			\textbf{c} & \textcolor{red}{d} & b & c & d & e & \textcolor{red}{d} \\
 			\hline
-			\textbf{d} & d & a & a & d & d & d \\
+			\textbf{d} & a & a & a & d & e & f \\
 			\hline
-			\textbf{e} & & & & & e & e \\
+			\textbf{e} & a & b & c & d & e & f \\
 			\hline
-			\textbf{f} & \textcolor{red}{d} & \textcolor{red}{d} & \textcolor{red}{d} & f & \textcolor{red}{d} & \textcolor{red}{d} \\
+			\textbf{f} & \textcolor{red}{d} & \textcolor{red}{d} & \textcolor{red}{d} & d & \textcolor{red}{d} & \textcolor{red}{d} \\
 			\end{tabular}
 		\caption{Iteration: n = 4, Backtracking}
 		\label{tab:Iteration: n = 4, Backtracking}
 		\end{subtable}
-	\end{table} 
-                     	\pagebreak 
-                     	\begin{table}[H] 
-                     	\ContinuedFloat 
-                     	\centering
-		\begin{subtable}{0.45\textwidth} 
-           		\centering
-			\begin{tabular}[t]{c ? c | c | c | c | c | c } 
-             			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
+	\caption{{Floyd-Warshall}}
+\end{table}
+\pagebreak
+\begin{table}[H]
+	\ContinuedFloat
+	\centering
+		\begin{subtable}{0.45\textwidth}
+		\centering
+			\begin{tabular}[t]{c ? c | c | c | c | c | c }
+			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
 			\specialrule{1pt}{0pt}{0pt}
 			\textbf{a} & 6 & 1 & 2 & 2 & 4 & 6 \\
 			\hline
 			\textbf{b} & 5 & 6 & 7 & 1 & 3 & 5 \\
 			\hline
-			\textbf{c} & 7 & 2 & 1 & 3 & 2 & \textcolor{red}{4} \\
+			\textbf{c} & 6 & 2 & 1 & 2 & 3 & \textcolor{red}{5} \\
 			\hline
 			\textbf{d} & 4 & 5 & 6 & 1 & 2 & 4 \\
 			\hline
@@ -226,36 +226,36 @@
 		\caption{Iteration: n = 5, Weights}
 		\label{tab:Iteration: n = 5, Weights}
 		\end{subtable}
-		\begin{subtable}{0.45\textwidth} 
-           		\centering
-			\begin{tabular}[t]{c ? c | c | c | c | c | c } 
-             			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
+		\begin{subtable}{0.45\textwidth}
+		\centering
+			\begin{tabular}[t]{c ? c | c | c | c | c | c }
+			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
 			\specialrule{1pt}{0pt}{0pt}
-			\textbf{a} & d & a & a & b & c & d \\
+			\textbf{a} & b & b & c & b & b & b \\
 			\hline
-			\textbf{b} & d & d & d & b & d & d \\
+			\textbf{b} & d & d & d & d & d & d \\
 			\hline
-			\textbf{c} & d & c & c & c & c & \textcolor{red}{e} \\
+			\textbf{c} & d & b & c & d & e & \textcolor{red}{e} \\
 			\hline
-			\textbf{d} & d & a & a & d & d & d \\
+			\textbf{d} & a & a & a & d & e & f \\
 			\hline
-			\textbf{e} & & & & & e & e \\
+			\textbf{e} & a & b & c & d & e & f \\
 			\hline
-			\textbf{f} & d & d & d & f & d & d \\
+			\textbf{f} & d & d & d & d & d & d \\
 			\end{tabular}
 		\caption{Iteration: n = 5, Backtracking}
 		\label{tab:Iteration: n = 5, Backtracking}
 		\end{subtable}
-		\begin{subtable}{0.45\textwidth} 
-           		\centering
-			\begin{tabular}[t]{c ? c | c | c | c | c | c } 
-             			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
+		\begin{subtable}{0.45\textwidth}
+		\centering
+			\begin{tabular}[t]{c ? c | c | c | c | c | c }
+			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
 			\specialrule{1pt}{0pt}{0pt}
 			\textbf{a} & 6 & 1 & 2 & 2 & 4 & 6 \\
 			\hline
 			\textbf{b} & 5 & 6 & 7 & 1 & 3 & 5 \\
 			\hline
-			\textbf{c} & 7 & 2 & 1 & 3 & 2 & 4 \\
+			\textbf{c} & 6 & 2 & 1 & 2 & 3 & 5 \\
 			\hline
 			\textbf{d} & 4 & 5 & 6 & 1 & 2 & 4 \\
 			\hline
@@ -266,26 +266,26 @@
 		\caption{Iteration: n = 6, Weights}
 		\label{tab:Iteration: n = 6, Weights}
 		\end{subtable}
-		\begin{subtable}{0.45\textwidth} 
-           		\centering
-			\begin{tabular}[t]{c ? c | c | c | c | c | c } 
-             			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
+		\begin{subtable}{0.45\textwidth}
+		\centering
+			\begin{tabular}[t]{c ? c | c | c | c | c | c }
+			 & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} & \textbf{e} & \textbf{f} \\
 			\specialrule{1pt}{0pt}{0pt}
-			\textbf{a} & d & a & a & b & c & d \\
+			\textbf{a} & b & b & c & b & b & b \\
 			\hline
-			\textbf{b} & d & d & d & b & d & d \\
+			\textbf{b} & d & d & d & d & d & d \\
 			\hline
-			\textbf{c} & d & c & c & c & c & e \\
+			\textbf{c} & d & b & c & d & e & e \\
 			\hline
-			\textbf{d} & d & a & a & d & d & d \\
+			\textbf{d} & a & a & a & d & e & f \\
 			\hline
-			\textbf{e} & \textcolor{red}{f} & \textcolor{red}{f} & \textcolor{red}{f} & \textcolor{red}{f} & \textcolor{red}{f} & e \\
+			\textbf{e} & \textcolor{red}{f} & \textcolor{red}{f} & \textcolor{red}{f} & \textcolor{red}{f} & \textcolor{red}{f} & f \\
 			\hline
-			\textbf{f} & d & d & d & f & d & d \\
+			\textbf{f} & d & d & d & d & d & d \\
 			\end{tabular}
 		\caption{Iteration: n = 6, Backtracking}
 		\label{tab:Iteration: n = 6, Backtracking}
 		\end{subtable}
 	\caption{Floyd-Warshall cont.}
 	\label{tab:Floyd-Warshall}
-	\end{table}
+\end{table}
